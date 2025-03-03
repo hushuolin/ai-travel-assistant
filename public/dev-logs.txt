@@ -16,3 +16,11 @@ Phase 2: Building Core UI Components & Routing
 5. Created Travel Search page (search/page.tsx)
 6. Tested all UI components
 7. Git Push Changes
+
+Phase 3: API Integration – AI Chat with OpenAI API
+1. Stored OpenAI API Key in .env.local
+2. Created Next.js API Route (/api/chat)
+3. Updated ChatInput.tsx to send queries to API
+4. Updated ChatHistory.tsx to display responses
+5. Tested AI Chat Feature in /chat
+6. Git Push Changes

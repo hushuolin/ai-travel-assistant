@@ -1,9 +1,7 @@
 "use client";
 
-import { useState } from "react";
-
-const ChatHistory = () => {
-  const [messages, setMessages] = useState<string[]>([]);
+const ChatHistory = ({ messages }: { messages: string[] }) => {
+  console.log("Messages received in ChatHistory:", messages); // ✅ Debugging log
 
   return (
     <div className="mt-4 p-4 bg-gray-100 rounded-lg h-40 overflow-y-auto">
