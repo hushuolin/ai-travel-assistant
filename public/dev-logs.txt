@@ -24,3 +24,12 @@ Phase 3: API Integration – AI Chat with OpenAI API
 4. Updated ChatHistory.tsx to display responses
 5. Tested AI Chat Feature in /chat
 6. Git Push Changes
+
+Phase 4: Authentication with NextAuth.js (Google OAuth)
+1. Installed NextAuth.js (next-auth)
+2. Set up Google OAuth credentials
+3. Created API route for authentication (/api/auth)
+4. Added Sign In/Out buttons (AuthButton.tsx)
+5. Integrated Auth in Navbar (Navbar.tsx)
+6. Protected AI Chat Page (/chat)
+7. Tested login/logout flow
