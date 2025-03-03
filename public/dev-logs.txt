@@ -33,3 +33,4 @@ Phase 4: Authentication with NextAuth.js (Google OAuth)
 5. Integrated Auth in Navbar (Navbar.tsx)
 6. Protected AI Chat Page (/chat)
 7. Tested login/logout flow
+8. Protect AI Chat & Require Authentication
