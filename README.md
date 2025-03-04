@@ -132,17 +132,6 @@ The **AI-Powered Travel Assistant** is a **React-based web application** that en
   });
   ```
 
----
-
-## **🎯 Key Takeaways for Interview**
-### **🔹 Why is this a strong React project?**
-✅ Uses **Next.js 14 (App Router, Server Components, API Routes)**  
-✅ Demonstrates **React Query, WebSockets, Authentication (NextAuth.js)**  
-✅ Implements **Dark Mode, Glassmorphism, Framer Motion Animations**  
-✅ Built with **Performance Optimization (SSG, SSR, CSR Hybrid)**  
-
----
-
 ## **🚀 Deployment**
 - **Hosting:** Vercel (`vercel deploy`)  
 - **Environment Variables (`.env.local`):**
@@ -153,13 +142,5 @@ The **AI-Powered Travel Assistant** is a **React-based web application** that en
   GOOGLE_CLIENT_SECRET=your_google_client_secret
   ```
 
----
 
-## **📌 Next Steps**
-1️⃣ **Optimize API calls for faster performance.**  
-2️⃣ **Enhance WebSocket interactions with better UI updates.**  
-3️⃣ **Deploy a production-ready version on Vercel.**  
-
-📌 **Interview Tip:**  
-💡 Be prepared to explain **React Query, NextAuth, WebSockets, and Component Design** during the interview. 🚀🔥
 
