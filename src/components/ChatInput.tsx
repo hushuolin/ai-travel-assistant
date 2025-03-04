@@ -5,7 +5,7 @@ import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { motion } from "framer-motion";
 
-const ChatInput = ({ onNewMessage }: { onNewMessage: (message: string) => void }) => {
+const ChatInput = ({ onNewMessage }: { onNewMessage: (message: string, sender: "user" | "ai") => void }) => {
   const [query, setQuery] = useState("");
 
   const aiQuery = useMutation({
@@ -16,13 +16,18 @@ const ChatInput = ({ onNewMessage }: { onNewMessage: (message: string) => void }
       return res.data.message;
     },
     onSuccess: (message) => {
-      onNewMessage(message);
+      onNewMessage(message, "ai");
     },
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!query.trim() || aiQuery.isPending) return;
+
+    // Add user message
+    onNewMessage(query, "user");
+
+    // Send to AI
     aiQuery.mutate(query);
     setQuery("");
   };

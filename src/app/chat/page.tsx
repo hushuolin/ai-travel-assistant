@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 
 export default function ChatPage() {
   const { data: session, status } = useSession();
-  const [messages, setMessages] = useState<string[]>([]);
+  const [messages, setMessages] = useState<{ sender: "user" | "ai"; text: string }[]>([]);
 
-  const handleNewMessage = (message: string) => {
-    setMessages((prevMessages) => [...prevMessages, message]);
+  const handleNewMessage = (message: string, sender: "user" | "ai") => {
+    setMessages((prevMessages) => [...prevMessages, { sender, text: message }]);
   };
 
   if (status === "loading") {
@@ -19,7 +19,7 @@ export default function ChatPage() {
       <div className="flex justify-center items-center h-screen relative">
         {/* Background Image */}
         <div className="absolute inset-0 bg-[url('/chat-bg.jpg')] bg-cover bg-center brightness-75"></div>
-        
+
         <motion.p
           className="text-lg font-semibold text-white relative z-10"
           initial={{ opacity: 0 }}
@@ -71,7 +71,7 @@ export default function ChatPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-2xl font-bold drop-shadow-lg">
+        <h2 className="text-2xl font-bold drop-shadow-lg text-center">
           AI Travel Assistant
         </h2>
         <ChatHistory messages={messages} />
