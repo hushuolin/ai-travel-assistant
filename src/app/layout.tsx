@@ -14,11 +14,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors">
+      <body className="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors overflow-x-hidden">
         <QueryProvider>
           <AuthProvider>
             <Navbar />
-            <main className="container mx-auto p-6">{children}</main>
+            {/* ✅ Ensure no extra margins causing horizontal overflow */}
+            <main className="w-full max-w-screen-xl mx-auto px-6">{children}</main>
           </AuthProvider>
         </QueryProvider>
       </body>
